@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InverntarioUbuntu", "InverntarioUbuntu\InverntarioUbuntu.csproj", "{D7AACC39-A0ED-433E-B928-A026AD2B6BAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7AACC39-A0ED-433E-B928-A026AD2B6BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AACC39-A0ED-433E-B928-A026AD2B6BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7AACC39-A0ED-433E-B928-A026AD2B6BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7AACC39-A0ED-433E-B928-A026AD2B6BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {551A6ECA-96E2-4ECC-A0D0-514808D480EC}
+	EndGlobalSection
+EndGlobal
