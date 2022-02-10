@@ -106,6 +106,7 @@ namespace InverntarioUbuntu
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "frmProductos";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
