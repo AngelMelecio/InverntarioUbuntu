@@ -10,10 +10,20 @@ namespace InverntarioUbuntu.BACKEND
 {
     class dao
     {
-        public DataTable obtenerTodos()
+        public DataTable obtenerInventario()
         {
             MySqlCommand consulta =
-                new MySqlCommand(@"SELECT * FROM Alumnos;");
+                new MySqlCommand(@"SELECT * FROM inventario;");
+
+            Conexion C = new Conexion();
+            return C.ejecutarConsulta(consulta);
+
+        }
+        public DataTable obtenerAreas()
+        {
+            MySqlCommand consulta =
+                new MySqlCommand(@"SELECT * FROM areas;");
+
             Conexion C = new Conexion();
             return C.ejecutarConsulta(consulta);
 

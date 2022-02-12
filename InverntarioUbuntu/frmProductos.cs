@@ -24,6 +24,8 @@ namespace InverntarioUbuntu
         }
         private void frmProductos_Load(object sender, EventArgs e)
         {
+            dao d = new dao();
+            dataGridView1.DataSource = d.obtenerInventario();
         }
     }
 }

@@ -15,8 +15,8 @@ namespace InverntarioUbuntu.BACKEND
         {
             //Comando para conectarse Local
 
-            conexion.ConnectionString = " server=localHost;database=nwind;" +
-                   "uid=root;pwd=root";
+            conexion.ConnectionString = "server=localHost;database=ubuntuDB;" +
+                   "uid=root;password=5194";
 
             // Comando para conetar a Ubuntu
 
