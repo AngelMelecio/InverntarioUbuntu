@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InverntarioUbuntu.BACKEND;
+using InverntarioUbuntu.POJOS;
 
 namespace InverntarioUbuntu
 {
@@ -25,7 +26,17 @@ namespace InverntarioUbuntu
         private void frmProductos_Load(object sender, EventArgs e)
         {
             dao d = new dao();
-            dataGridView1.DataSource = d.obtenerInventario();
+            dataGridView1.DataSource = d.obtener("Inventario");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAgregarP nuevo = new frmAgregarP();
+            if (nuevo.ShowDialog() == DialogResult.OK)
+            {
+                dao d = new dao();
+                dataGridView1.DataSource = d.obtener("Inventario");
+            }
         }
     }
 }

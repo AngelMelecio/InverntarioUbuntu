@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="BACKEND\Conexion.cs" />
     <Compile Include="BACKEND\dao.cs" />
+    <Compile Include="frmAgregarP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarP.Designer.cs">
+      <DependentUpon>frmAgregarP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAreas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +73,13 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="POJOS\Areas.cs" />
+    <Compile Include="POJOS\Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarP.resx">
+      <DependentUpon>frmAgregarP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAreas.resx">
       <DependentUpon>frmAreas.cs</DependentUpon>
     </EmbeddedResource>

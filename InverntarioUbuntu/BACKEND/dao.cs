@@ -10,23 +10,22 @@ namespace InverntarioUbuntu.BACKEND
 {
     class dao
     {
-        public DataTable obtenerInventario()
+        public DataTable obtener( string parametros )
         {
             MySqlCommand consulta =
-                new MySqlCommand(@"SELECT * FROM inventario;");
+                new MySqlCommand(@"SELECT * FROM "+ parametros +";");
 
             Conexion C = new Conexion();
             return C.ejecutarConsulta(consulta);
 
         }
-        public DataTable obtenerAreas()
+        public bool insertar( string N, string D, string S, string C, string F, string T, string O, int A)
         {
-            MySqlCommand consulta =
-                new MySqlCommand(@"SELECT * FROM areas;");
-
-            Conexion C = new Conexion();
-            return C.ejecutarConsulta(consulta);
-
+            MySqlCommand sentencia =
+                new MySqlCommand(@"INSERT INTO Inventario values(" +
+               "default,'" + N + "','" + D + "','" + S + "','" + C + "','" + F + "','" + T + "','" + O + "'," + A + ");");
+            Conexion Conexion = new Conexion();
+            return Conexion.ejecutarSentencia(sentencia);
         }
-    }
+     }
 }

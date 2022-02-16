@@ -63,6 +63,30 @@ namespace InverntarioUbuntu.BACKEND
                 return null;
             }
         }
+        public bool ejecutarSentencia(MySqlCommand sentencia)
+        {
+            if (conectar())
+            {
+                try
+                {
+                    sentencia.Connection = conexion;
+                    sentencia.ExecuteNonQuery();
+                }
+                catch (MySqlException ex)
+                {
+                    return false;
+                }
+                finally
+                {
+                    desconectar();
+                }
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
 
     }
 }
