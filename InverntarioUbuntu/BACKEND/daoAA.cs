@@ -36,13 +36,10 @@ namespace InverntarioUbuntu.BACKEND
             return Conexion.ejecutarSentencia(sentencia);
         }
 
-        public bool eliminar(Object R)
+        public bool eliminar()
         {
-
-            MySqlCommand sentencia = new MySqlCommand
-                (
-                    @"Delete from table Area" + R + ";");
-            return Conexion.ejecutarSentencia(sentencia);
+            return false;
+            
         }
 
 
