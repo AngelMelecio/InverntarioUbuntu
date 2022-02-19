@@ -27,6 +27,20 @@ namespace InverntarioUbuntu.BACKEND
             Conexion Conexion = new Conexion();
             return Conexion.ejecutarSentencia(sentencia);
         }
+        public bool eliminar(string tabla, int id)
+        {
+            MySqlCommand sentencia = new MySqlCommand(@"DELETE FROM " 
+                    + tabla + " Where id = " + id.ToString() + " ;");
+            Conexion Conexion = new Conexion();
+            return Conexion.ejecutarSentencia(sentencia);
+        }
+        public bool insertar(string N, string U)
+        {
+            MySqlCommand sentencia =
+                new MySqlCommand(@"INSERT INTO Areas values(default,'" + N + "','" + U + "');");
+            Conexion Conexion = new Conexion();
+            return Conexion.ejecutarSentencia(sentencia);
+        }
 
-     }
+    }
 }

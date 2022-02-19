@@ -14,9 +14,11 @@ namespace InverntarioUbuntu
 {
     public partial class frmProductos : Form
     {
+        dao d;
         public frmProductos()
         {
             InitializeComponent();
+            d = new dao();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,8 +27,7 @@ namespace InverntarioUbuntu
         }
         private void frmProductos_Load(object sender, EventArgs e)
         {
-            dao d = new dao();
-            dataGridView1.DataSource = d.obtener("Inventario");
+            actualizarDatos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,9 +35,26 @@ namespace InverntarioUbuntu
             frmAgregarP nuevo = new frmAgregarP();
             if (nuevo.ShowDialog() == DialogResult.OK)
             {
-                dao d = new dao();
-                dataGridView1.DataSource = d.obtener("Inventario");
+                actualizarDatos();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int Seleccionadas = dataGridView1.SelectedRows.Count;
+            if (Seleccionadas == 0 || Seleccionadas > 1)
+                return;
+
+            int index =int.Parse( dataGridView1.SelectedRows[0].Cells[0].Value.ToString() );
+
+            MessageBox.Show(index+"");
+            dao d = new dao();
+            d.eliminar("Inventario", index);
+            actualizarDatos();
+        }
+        public void actualizarDatos()
+        {
+            dataGridView1.DataSource = d.obtener("Inventario");
         }
     }
 }

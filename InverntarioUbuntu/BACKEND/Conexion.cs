@@ -13,8 +13,8 @@ namespace InverntarioUbuntu.BACKEND
         static MySqlConnection conexion = new MySqlConnection();
         public  bool conectar(MySqlConnection conexion)
         {
-            conexion.ConnectionString = "server=localHost;database=ubuntudb;" +
-                   "uid=root;password=SQLden18*";
+            conexion.ConnectionString = "server=localHost;database=ubuntuDB;" +
+                   "uid=root;password=5194";
 
             // Comando para conetar a Ubuntu
 

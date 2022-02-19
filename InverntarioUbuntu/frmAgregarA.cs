@@ -24,7 +24,7 @@ namespace InverntarioUbuntu
             string N = txtNombre.Text;
             string U = txtUbicacion.Text;
 
-            daoAA d = new daoAA();
+            dao d = new dao();
             if (d.insertar(N, U))
             {
                 MessageBox.Show("Area Agregada Exitosamente");
@@ -39,7 +39,7 @@ namespace InverntarioUbuntu
 
         private void frmAgregarA_Load(object sender, EventArgs e)
         {
-            daoAA d = new daoAA();
+    
 
             
         }
