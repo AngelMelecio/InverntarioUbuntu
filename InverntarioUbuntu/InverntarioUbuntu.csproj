@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +49,13 @@
   <ItemGroup>
     <Compile Include="BACKEND\Conexion.cs" />
     <Compile Include="BACKEND\dao.cs" />
+    <Compile Include="BACKEND\daoAA.cs" />
+    <Compile Include="frmAgregarA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarA.Designer.cs">
+      <DependentUpon>frmAgregarA.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,9 @@
     <Compile Include="POJOS\Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarA.resx">
+      <DependentUpon>frmAgregarA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarP.resx">
       <DependentUpon>frmAgregarP.cs</DependentUpon>
     </EmbeddedResource>

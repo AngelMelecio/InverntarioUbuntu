@@ -11,19 +11,17 @@ namespace InverntarioUbuntu.BACKEND
     class Conexion
     {
         static MySqlConnection conexion = new MySqlConnection();
-        public  bool conectar()
+        public  bool conectar(MySqlConnection conexion)
         {
-            //Comando para conectarse Local
-
-            conexion.ConnectionString = "server=localHost;database=ubuntuDB;" +
-                   "uid=root;password=5194";
+            conexion.ConnectionString = "server=localHost;database=ubuntudb;" +
+                   "uid=root;password=SQLden18*";
 
             // Comando para conetar a Ubuntu
 
             //conexion.ConnectionString = "server=192.168.137.100;database=ubuntuDB;" +
             //    "uid=userWindows;pwd=1234";
             try
-            {
+                {
                 conexion.Open();
                 return true;
             }
@@ -39,7 +37,9 @@ namespace InverntarioUbuntu.BACKEND
         }
         public DataTable ejecutarConsulta(MySqlCommand consulta)
         {
-            if (conectar())
+            if (conectar(            //Comando para conectarse Local
+
+            conexion))
             {
                 try
                 {
@@ -65,7 +65,9 @@ namespace InverntarioUbuntu.BACKEND
         }
         public bool ejecutarSentencia(MySqlCommand sentencia)
         {
-            if (conectar())
+            if (conectar(            //Comando para conectarse Local
+
+            conexion))
             {
                 try
                 {

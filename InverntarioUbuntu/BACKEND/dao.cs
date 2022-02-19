@@ -27,5 +27,6 @@ namespace InverntarioUbuntu.BACKEND
             Conexion Conexion = new Conexion();
             return Conexion.ejecutarSentencia(sentencia);
         }
+
      }
 }

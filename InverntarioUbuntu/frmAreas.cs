@@ -24,5 +24,23 @@ namespace InverntarioUbuntu
             dao d = new dao();
             dataGridView1.DataSource = d.obtener( "Areas" );
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAgregarA nuevo = new frmAgregarA();
+            if (nuevo.ShowDialog() == DialogResult.OK)
+            {
+                dao d = new dao();
+                dataGridView1.DataSource = d.obtener("Areas");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+        }
     }
 }
