@@ -43,7 +43,7 @@ namespace InverntarioUbuntu
             this.label1.Location = new System.Drawing.Point(9, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 29);
+            this.label1.Size = new System.Drawing.Size(51, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Areas";
             // 
@@ -88,6 +88,7 @@ namespace InverntarioUbuntu
             this.button2.TabIndex = 4;
             this.button2.Text = "EDITAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -105,7 +106,7 @@ namespace InverntarioUbuntu
             // 
             // frmAreas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.button3);

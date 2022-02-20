@@ -47,6 +47,8 @@ namespace InverntarioUbuntu
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtTipo = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cboArea
@@ -225,11 +227,33 @@ namespace InverntarioUbuntu
             this.txtTipo.Size = new System.Drawing.Size(100, 20);
             this.txtTipo.TabIndex = 39;
             // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Location = new System.Drawing.Point(42, 58);
+            this.Id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(16, 13);
+            this.Id.TabIndex = 40;
+            this.Id.Text = "Id";
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(134, 51);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.MaxLength = 40;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(81, 20);
+            this.txtId.TabIndex = 41;
+            // 
             // frmAgregarP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 398);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.Id);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
@@ -276,5 +300,7 @@ namespace InverntarioUbuntu
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.Label Id;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
